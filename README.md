@@ -22,14 +22,14 @@ To install all required packages, type _pip install -r requirements.txt_ int the
 6. Previous step will change the appearance of the DevTools. Change horizontal size of the DevTools, so that only the "Console" tab is visible:
 
 <p align="center">
-  <img src="/DevToolsLook.png" />
+  <img src="/resources/images/DevToolsLook.png" />
 </p>
 
 7. Close the DevTools with "ctrl", "shift", "j" hotkey.
 8. Make sure to left-click to the right of the gumtree logo on top of the page:
 
 <p align="center">
-  <img src="/GumtreeClickPlace.png" />
+  <img src="/resources/images/GumtreeClickPlace.png" />
 </p>
 
 9. Go to Python script.
