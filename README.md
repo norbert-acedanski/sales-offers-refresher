@@ -11,7 +11,7 @@ Python 3.8.0
 
 All required packages in requirements.txt file.
 
-To install all required packages, type _pip install -r requirements.txt_ int the terminal.
+To install all required packages, type "_pip install -r requirements.txt_" in the terminal.
 
 ### Working with sale-offers-refresher:
 1. Open gumtree tab in a new window.
