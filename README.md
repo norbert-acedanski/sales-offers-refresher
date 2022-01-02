@@ -13,8 +13,6 @@ All required packages in requirements.txt file.
 
 To install all required packages, type _pip install -r requirements.txt_ int the terminal.
 
-All required packages in requirements.txt file.
-
 ### Working with sale-offers-refresher:
 1. Open gumtree tab in a new window.
 2. Go to your gumtree account and choose _Expired_.
