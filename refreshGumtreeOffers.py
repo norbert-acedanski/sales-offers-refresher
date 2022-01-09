@@ -54,7 +54,8 @@ def refreshAllOpenedOffers():
 
 def closeAllRefreshedOffersTabs():
     pyautogui.keyDown("ctrl")
-    pyautogui.press("w", presses=numberOfOffersToRefresh)
+    for i in range(numberOfOffersToRefresh):
+        pyautogui.press("w")
     pyautogui.keyUp("ctrl")
 
 def goToNextTab():
