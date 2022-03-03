@@ -2,7 +2,7 @@ import pyautogui
 import time
 
 numberOfOffersToRefresh = 10
-switchToGumTreeTab = True
+switchToGumTreeTab = False
 
 def switchWindow():
     if switchToGumTreeTab:
@@ -37,6 +37,7 @@ def openAllOffersToRefresh():
         pressTabNTimes(3)
         pyautogui.keyUp("shift")
         pyautogui.press("enter")
+        time.sleep(0.1)
         goToPreviousTab()
         pressTabNTimes(3)
         pyautogui.press("enter")
@@ -65,7 +66,8 @@ def goToPreviousTab():
     pyautogui.hotkey("ctrl", "shift", "tab")
 
 def pressTabNTimes(N):
-    pyautogui.press("tab", presses=N)
+    for _ in range(N):
+        pyautogui.press("tab")
 
 def closeTab():
     pyautogui.hotkey('ctrl', 'w')
