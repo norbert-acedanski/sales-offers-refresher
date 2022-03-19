@@ -7,6 +7,11 @@ Script refreshes all espired offers from **gumtree.pl** with _pyautogui_ package
 Python 3.8.0
 
 # Getting started
+
+### Final commit
+
+After 07.04.2022, Gumtree.pl is no longer supported, so this is the last commit for this project.
+
 ### Requirements
 
 All required packages in requirements.txt file.
