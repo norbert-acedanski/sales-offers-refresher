@@ -1,12 +1,12 @@
 import pyautogui
 import time
 
-numberOfOffersToRefresh = 10
-switchToGumTreeTab = False
+number_of_offers_to_refresh = 10
+switch_to_gum_tree_tab = False
 
 
 def switch_window():
-    if switchToGumTreeTab:
+    if switch_to_gum_tree_tab:
         pyautogui.hotkey("alt", "tab")
 
 
@@ -38,7 +38,7 @@ def find_first_instance():
 
 
 def open_all_offers_to_refresh():
-    for _ in range(numberOfOffersToRefresh):
+    for _ in range(number_of_offers_to_refresh):
         pyautogui.keyDown("shift")
         press_tab_n_times(3)
         pyautogui.keyUp("shift")
@@ -52,7 +52,7 @@ def open_all_offers_to_refresh():
 
 def refresh_all_opened_offers():
     open_close_dev_tools()
-    for _ in range(numberOfOffersToRefresh):
+    for _ in range(number_of_offers_to_refresh):
         go_to_next_tab()
         pyautogui.keyDown("shift")
         press_tab_n_times(10)
@@ -63,7 +63,7 @@ def refresh_all_opened_offers():
 
 def close_all_refreshed_offers_tabs():
     pyautogui.keyDown("ctrl")
-    for _ in range(numberOfOffersToRefresh):
+    for _ in range(number_of_offers_to_refresh):
         pyautogui.press("w")
     pyautogui.keyUp("ctrl")
 
