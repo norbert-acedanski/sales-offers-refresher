@@ -4,76 +4,90 @@ import time
 numberOfOffersToRefresh = 10
 switchToGumTreeTab = False
 
-def switchWindow():
+
+def switch_window():
     if switchToGumTreeTab:
         pyautogui.hotkey("alt", "tab")
 
-def openCloseDevTools():
+
+def open_close_dev_tools():
     pyautogui.hotkey("ctrl", "shift", "j")
 
-def clearDevToolsConsole():
+
+def clear_dev_tools_console():
     pyautogui.hotkey("ctrl", "l")
 
-def openElementsTab():
-    openCloseDevTools()
+
+def open_elements_tab():
+    open_close_dev_tools()
     time.sleep(2)
-    clearDevToolsConsole()
+    clear_dev_tools_console()
     time.sleep(1)
     pyautogui.keyDown("shift")
-    pressTabNTimes(13)
+    press_tab_n_times(13)
     pyautogui.keyUp("shift")
     pyautogui.press("enter")
     pyautogui.press("down")
     pyautogui.press("enter")
     time.sleep(1)
 
-def findFirstInstance():
+
+def find_first_instance():
     pyautogui.hotkey("ctrl", "f")
     pyautogui.write("row clearfix")
 
-def openAllOffersToRefresh():
-    for i in range(numberOfOffersToRefresh):
+
+def open_all_offers_to_refresh():
+    for _ in range(numberOfOffersToRefresh):
         pyautogui.keyDown("shift")
-        pressTabNTimes(3)
+        press_tab_n_times(3)
         pyautogui.keyUp("shift")
         pyautogui.press("enter")
         time.sleep(0.1)
-        goToPreviousTab()
-        pressTabNTimes(3)
+        go_to_previous_tab()
+        press_tab_n_times(3)
         pyautogui.press("enter")
     time.sleep(2)
 
-def refreshAllOpenedOffers():
-    openCloseDevTools()
-    for i in range(numberOfOffersToRefresh):
-        goToNextTab()
+
+def refresh_all_opened_offers():
+    open_close_dev_tools()
+    for _ in range(numberOfOffersToRefresh):
+        go_to_next_tab()
         pyautogui.keyDown("shift")
-        pressTabNTimes(10)
+        press_tab_n_times(10)
         pyautogui.keyUp("shift")
         pyautogui.press("enter")
     time.sleep(4)
 
-def closeAllRefreshedOffersTabs():
+
+def close_all_refreshed_offers_tabs():
     pyautogui.keyDown("ctrl")
-    for i in range(numberOfOffersToRefresh):
+    for _ in range(numberOfOffersToRefresh):
         pyautogui.press("w")
     pyautogui.keyUp("ctrl")
 
-def goToNextTab():
+
+def go_to_next_tab():
     pyautogui.hotkey("ctrl", "tab")
 
-def goToPreviousTab():
+
+def go_to_previous_tab():
     pyautogui.hotkey("ctrl", "shift", "tab")
 
-def pressTabNTimes(N):
-    for _ in range(N):
+
+def press_tab_n_times(n: int):
+    for _ in range(n):
         pyautogui.press("tab")
 
-def closeTab():
+
+def close_tab():
     pyautogui.hotkey('ctrl', 'w')
 
-def refreshTab():
+
+def refresh_tab():
     pyautogui.press("f5")
+
 
 if __name__ == '__main__':
     for i in range(3, 0, -1):
@@ -81,11 +95,11 @@ if __name__ == '__main__':
         time.sleep(0.5)
     print("Start!")
     time.sleep(1)
-    switchWindow()
-    openElementsTab()
-    findFirstInstance()
-    openAllOffersToRefresh()
-    refreshAllOpenedOffers()
-    closeAllRefreshedOffersTabs()
+    switch_window()
+    open_elements_tab()
+    find_first_instance()
+    open_all_offers_to_refresh()
+    refresh_all_opened_offers()
+    close_all_refreshed_offers_tabs()
     pyautogui.press("home")
-    refreshTab()
+    refresh_tab()

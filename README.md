@@ -1,7 +1,7 @@
 # sale-offers-refresher
 
 # About The Project
-Script refreshes all espired offers from **gumtree.pl** with _pyautogui_ package in Chrome. It requires preparations listed in Working with...
+Script refreshes all expired offers from **gumtree.pl** with _pyautogui_ package in Chrome. It requires preparations listed in Working with...
 
 # Built With
 Python 3.8.0
@@ -16,7 +16,7 @@ After 07.04.2022, Gumtree.pl is no longer supported, so this is the last commit 
 
 All required packages in requirements.txt file.
 
-To install all required packages, type "_pip install -r requirements.txt_" in the terminal.
+To install all required packages, type `pip install -r requirements.txt` in the terminal.
 
 ### Working with sale-offers-refresher:
 1. Open gumtree tab in a new window.
